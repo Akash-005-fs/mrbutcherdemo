@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/mrbutcherdemo/static/css/main.8b914cc5.css",
+    "main.js": "/mrbutcherdemo/static/js/main.818f3ac9.js",
+    "static/js/453.6c04f3d5.chunk.js": "/mrbutcherdemo/static/js/453.6c04f3d5.chunk.js",
+    "static/media/thick sirolin.jpg": "/mrbutcherdemo/static/media/thick sirolin.142e3b847efd24316257.jpg",
+    "static/media/mrbutcherv1.mp4": "/mrbutcherdemo/static/media/mrbutcherv1.0da914b4426ff4750324.mp4",
+    "static/media/b3.png": "/mrbutcherdemo/static/media/b3.3194b7d8e18e1be0f7ce.png",
+    "static/media/b2.png": "/mrbutcherdemo/static/media/b2.ee254903b686f007f80c.png",
+    "static/media/AR.JPG": "/mrbutcherdemo/static/media/AR.09a688e28ea8c4378590.JPG",
+    "static/media/b1.png": "/mrbutcherdemo/static/media/b1.d5c044fe35174bf174b5.png",
+    "static/media/tenderloien.jpg": "/mrbutcherdemo/static/media/tenderloien.335225a62ada46cc3fb5.jpg",
+    "static/media/sirolien strips.png": "/mrbutcherdemo/static/media/sirolien strips.847aca287c2600960321.png",
+    "static/media/beefstrips.png": "/mrbutcherdemo/static/media/beefstrips.a79d2036c2cc864fa475.png",
+    "static/media/Untitled (1900 x 900 px).png": "/mrbutcherdemo/static/media/Untitled (1900 x 900 px).c4e1e4638f134eb051dc.png",
+    "static/media/brianstocksoup.png": "/mrbutcherdemo/static/media/brianstocksoup.50ac81bcca67b61b2f5e.png",
+    "static/media/flank.png": "/mrbutcherdemo/static/media/flank.061d2caef12959e4b683.png",
+    "static/media/buffaloburgers.png": "/mrbutcherdemo/static/media/buffaloburgers.f68d329ff1d251377ec7.png",
+    "static/media/beeftail.png": "/mrbutcherdemo/static/media/beeftail.026bbbbd949eb0c7caed.png",
+    "static/media/Entrecote-de-boeuf.jpg": "/mrbutcherdemo/static/media/Entrecote-de-boeuf.90f523189dc7d44e9da6.jpg",
+    "static/media/saude.jpg": "/mrbutcherdemo/static/media/saude.83ecaece44089a7394a3.jpg",
+    "static/media/roastbeef.jpg": "/mrbutcherdemo/static/media/roastbeef.d0bda11a032c9ae3cb5e.jpg",
+    "static/media/pillets.jpg": "/mrbutcherdemo/static/media/pillets.2f781a20923efe465f15.jpg",
+    "static/media/ribstewmeat.jpg": "/mrbutcherdemo/static/media/ribstewmeat.f1dcf3786aa9dd0e7d59.jpg",
+    "static/media/pichama.jpg": "/mrbutcherdemo/static/media/pichama.e4c7866baee405e6593f.jpg",
+    "static/media/mainlogo.png": "/mrbutcherdemo/static/media/mainlogo.6a98ef7d65bb0d8cbf83.png",
+    "static/media/beefdemopic.png": "/mrbutcherdemo/static/media/beefdemopic.7ee58a2635c497f48aad.png",
+    "static/media/writtenlogo.png": "/mrbutcherdemo/static/media/writtenlogo.880f5cb3746dd8827851.png",
+    "index.html": "/mrbutcherdemo/index.html",
+    "main.8b914cc5.css.map": "/mrbutcherdemo/static/css/main.8b914cc5.css.map",
+    "main.818f3ac9.js.map": "/mrbutcherdemo/static/js/main.818f3ac9.js.map",
+    "453.6c04f3d5.chunk.js.map": "/mrbutcherdemo/static/js/453.6c04f3d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b914cc5.css",
+    "static/js/main.818f3ac9.js"
+  ]
+}
