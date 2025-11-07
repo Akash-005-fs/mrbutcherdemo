@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mrbutcherdemo/static/css/main.8b914cc5.css",
-    "main.js": "/mrbutcherdemo/static/js/main.818f3ac9.js",
+    "main.js": "/mrbutcherdemo/static/js/main.59ddea17.js",
     "static/js/453.6c04f3d5.chunk.js": "/mrbutcherdemo/static/js/453.6c04f3d5.chunk.js",
     "static/media/thick sirolin.jpg": "/mrbutcherdemo/static/media/thick sirolin.142e3b847efd24316257.jpg",
     "static/media/mrbutcherv1.mp4": "/mrbutcherdemo/static/media/mrbutcherv1.0da914b4426ff4750324.mp4",
@@ -28,11 +28,11 @@
     "static/media/writtenlogo.png": "/mrbutcherdemo/static/media/writtenlogo.880f5cb3746dd8827851.png",
     "index.html": "/mrbutcherdemo/index.html",
     "main.8b914cc5.css.map": "/mrbutcherdemo/static/css/main.8b914cc5.css.map",
-    "main.818f3ac9.js.map": "/mrbutcherdemo/static/js/main.818f3ac9.js.map",
+    "main.59ddea17.js.map": "/mrbutcherdemo/static/js/main.59ddea17.js.map",
     "453.6c04f3d5.chunk.js.map": "/mrbutcherdemo/static/js/453.6c04f3d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8b914cc5.css",
-    "static/js/main.818f3ac9.js"
+    "static/js/main.59ddea17.js"
   ]
 }
