@@ -1,0 +1,160 @@
+.newsection {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 5vw;
+  background: #fff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Grid for large screens */
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
+  justify-items: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Card style */
+.restaurant-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  flex: 0 0 auto; /* important for horizontal scroll mode */
+}
+
+.restaurant-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Image wrapper */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  transition: transform 0.4s ease;
+}
+
+.restaurant-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Offer text overlay */
+.offer-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Restaurant details */
+.restaurant-info {
+  padding: 16px;
+}
+
+.restaurant-info h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.rating {
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.cuisines {
+  color: #555;
+  font-size: 0.85rem;
+  margin-bottom: 3px;
+}
+
+.location {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* --- 🌐 RESPONSIVE SCROLL MODE --- */
+@media (max-width: 1024px) {
+  .restaurant-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .restaurant-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .restaurant-grid::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+
+  .restaurant-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .restaurant-card {
+    max-width: 280px;
+    min-width: 260px;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+
+  .restaurant-grid {
+    gap: 15px;
+    padding-left: 10px;
+  }
+
+  .restaurant-card {
+    min-width: 240px;
+  }
+}

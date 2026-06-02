@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.products-page{
+  width: 100%;
+  background: #fff;
+  padding: 70px 6%;
+  font-family: "Poppins", sans-serif;
+}
+
+.products-header{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.products-header h1{
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.products-header p{
+  max-width: 700px;
+  margin: auto;
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.section-title{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.section-title::after{
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #b71c1c;
+  display: block;
+  margin-top: 10px;
+  border-radius: 0px;
+}
+
+.product-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.recipe-card{
+  width: 100%;
+  background: #fff;
+}
+
+.recipe-image-wrapper{
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+.recipe-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.recipe-card:hover .recipe-image{
+  transform: scale(1.08);
+}
+
+.recipe-content{
+  padding-top: 20px;
+}
+
+.recipe-category{
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #b71c1c;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.recipe-title{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.recipe-description{
+  color: #666;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.recipe-weight{
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #b71c1c;
+}
+
+@media (max-width: 992px){
+
+  .product-grid{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .recipe-image-wrapper{
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px){
+
+  .products-page{
+    padding: 50px 5%;
+  }
+
+  .products-header h1{
+    font-size: 2.2rem;
+  }
+
+  .section-title{
+    font-size: 1.7rem;
+  }
+
+  .recipe-title{
+    font-size: 1.5rem;
+  }
+
+  .recipe-image-wrapper{
+    height: 240px;
+  }
+
+  .product-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .products-header h1{
+    font-size: 1.8rem;
+  }
+
+  .recipe-title{
+    font-size: 1.3rem;
+  }
+
+  .recipe-description{
+    font-size: 14px;
+  }
+}
+
+
+/* ══════════════════════════════════════════════
+   ADD THESE RULES TO YOUR EXISTING products.css
+══════════════════════════════════════════════ */
+
+/* Price + weight row */
+.recipe-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.recipe-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recipe-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Add to Cart button */
+.add-to-cart-btn {
+  width: 100%;
+  padding: 14px 0;
+  border: 2.5px solid #111;
+  background: transparent;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.add-to-cart-btn.added {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff;
+}
+
+/* In-cart badge on card image */
+.card-in-cart-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #b71c1c;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* Make image wrapper relative so badge positions correctly */
+.recipe-image-wrapper {
+  position: relative;
+}

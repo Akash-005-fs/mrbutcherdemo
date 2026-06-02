@@ -1,0 +1,45 @@
+.parallax-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Each Parallax Image Section */
+.parallax {
+  height: 50vh; /* full screen height */
+  background-attachment: fixed; /* creates the parallax effect */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Overlay */
+.parallax-text {
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+
+.parallax-text h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive fix for mobile (mobile browsers disable fixed background) */
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+
+  .parallax-text h2 {
+    font-size: 2rem;
+  }
+}
