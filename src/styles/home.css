@@ -1,91 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+
 .mainwrapper{
   height: auto;
   width: 100%;
-  background-color: antiquewhite;
+ background-color: #ffffff;
+background-size: cover;
+background-position: center;
   display: flex;
   flex-direction: column;
 
 }
 
 
-.section1{
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(60, 214, 4);
-    display: flex;
-    position: relative;
-   
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ─── Section ─── */
+.section1 {
+  width: 100%;
+  background-color: #f8f4f0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: clamp(45vh, 65vw, 70vh);
 }
 
-.m1{
-    height: 100%;
-    width: 100%;
-   
-    z-index: 1;
-    position: absolute;
-    background-image: url(../pictures/Untitled\ \(1900\ x\ 900\ px\).png);
-    background-size: cover;
-    background-position: center;
+/* ─── Meat image ─── */
+.m1 {
+  position: absolute;
+  bottom: -22%;
+  left: -10%;
+  width: 100%;
+  height: 100%;
+  background-image: url(../pictures/LAUNCHING\ \(Presentation\).png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 1;
+  margin-bottom: -1.7em;
 }
 
-
-
-
-
-.m2{
-    height: 100%;
-    width: 100%;
-    background-color: #fc5102;
-    z-index: 0;
-    position: absolute;
-    display: flex;
+/* ─── Text block ─── */
+.text-block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3rem 3rem 3rem 0;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
+/* ─── Big text ─── */
+.big-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.4rem, 4.2vw, 4.2rem);
+  font-weight: 800;
+  color: #000000bb;
+  line-height: 1.05;
+  text-align: right;
+  margin: 0;
+  letter-spacing: -0.01em;
+  word-spacing: -0.02em;
+  transition:
+    font-size 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity   0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    color     0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* ─── Flag ─── */
+.flag-inline {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
+}
 
+.nl-flag {
+  width: clamp(28px, 3.5vw, 56px);
+  height: auto;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 0;
+  transition:
+    opacity   0.9s ease-out,
+    transform 0.9s ease-out;
+}
 
-.mleft{
-    height: 100%;
+.reveal.left  { transform: translateX(-60px); }
+.reveal.right { transform: translateX(60px); }
+.reveal.up    { transform: translateY(60px); }
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ══════════════════════════════════════════
+   BREAKPOINTS
+   ══════════════════════════════════════════ */
+
+/* ─── Ultra-wide ≥1600px ─── */
+@media screen and (min-width: 1600px) {
+  .section1 {
+    height: 65vh;
+  }
+
+  .text-block {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    padding: 4rem 5rem 4rem 0;
+  }
 }
 
-
-.mright{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     /* background-color: #fc5102; */
-     background-color: rgba(255, 255, 255, 0);
-     flex-direction: column;
+/* ─── Medium desktop / laptop 901px–1280px ─── */
+@media screen and (max-width: 1280px) {
+  .text-block {
+    width: 52%;
+    padding: 2.5rem 2.5rem 2.5rem 0;
+  }
 }
 
-
-.mright,.mleft p{
-    width: 80%;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-
+/* ─── Tablet landscape 769px–900px ─── */
 @media screen and (max-width: 900px) {
-    .mleft, .mright {
-        width: 100%;
-        height: 50%;
-    }
-    .m2 {
-        flex-direction: column;
-    }
+  .section1 {
+    height: clamp(42vh, 55vw, 55vh);
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .m1 {
+    bottom: -10%;
+    left: -8%;
+    width: 55%;
+    height: 100%;
+    background-position: bottom left;
+    margin-bottom: -1.7em;
+  }
+
+  .text-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 52%;
+    height: 100%;
+    padding: 2rem 2rem 2rem 0;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
+
+/* ─── Tablet portrait 481px–768px ─── */
+@media screen and (max-width: 768px) {
+  .section1 {
+    height: auto;
+    min-height: 70vw;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .text-block {
+    position: relative;
+    order: 1;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem 1rem;
+  }
+
+  .big-text {
+    text-align: center;
+    margin-bottom: -10rem;
+  }
+
+  .m1 {
+    position: relative;
+    order: 2;
+    width: 100%;
+    height: 52vw;
+    background-position: center bottom;
+    bottom: -150px;
+    left: 0;
+    margin-bottom: -1.7em;
+  }
+}
+
+/* ─── Mobile 401px–480px ─── */
+@media screen and (max-width: 480px) {
+  .section1 {
+    min-height: 80vw;
+  }
+
+  .text-block {
+    order: 1;
+    padding: 1.25rem 1.5rem 1rem;
+  }
+
+  .m1 {
+    order: 2;
+    height: 52vw;
+    margin-bottom: -1.7em;
+     bottom: -150px;
+  }
+
+  .big-text {
+    text-align: center;
+  }
+}
+
+/* ─── Tiny mobile ≤400px ─── */
+@media screen and (max-width: 400px) {
+  .section1 {
+    min-height: 90vw;
+  }
+
+  .text-block {
+    order: 1;
+    padding: 1rem 1.25rem 1rem;
+  }
+
+  .m1 {
+    order: 2;
+    height: 60vw;
+    width: 100%;
+    background-position: bottom;
+    left: 0;
+      margin-bottom: -1.8em;
+     bottom: -150px;
+  }
+
+  .big-text {
+    text-align: center;
+    line-height: 1.1;
+  }
+}
+
+/* ─── Very tiny ≤320px ─── */
+@media screen and (max-width: 320px) {
+  .big-text {
+    font-size: 1.3rem;
+    letter-spacing: -0.02em;
+  }
+
+  .nl-flag {
+    width: 24px;
+  }
+
+  .m1 {
+    margin-bottom: -1.7em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .section2{
     height: auto;
@@ -106,52 +302,6 @@
 
 
 
-/* ✨ Scroll Reveal Animation ✨ */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: all 0.9s ease-out;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Optional directional animations */
-.reveal.left {
-  transform: translateX(-60px);
-}
-
-.reveal.right {
-  transform: translateX(60px);
-}
-
-.reveal.up {
-  transform: translateY(60px);
-}
-
-/* When visible, reset transform */
-.reveal.visible.left,
-.reveal.visible.right,
-.reveal.visible.up {
-  transform: translate(0, 0);
-  opacity: 1;
-}
-
-/* Slightly delay elements inside sections for staggered appearance */
-.mleft h1,
-.mleft p,
-.mright h1,
-.mright p {
-  transition-delay: 0.1s;
-}
-
-.mleft p,
-.mright p {
-  transition-delay: 0.3s;
-}
 
 
 

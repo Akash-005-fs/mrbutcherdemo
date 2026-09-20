@@ -1,0 +1,195 @@
+/* brochureBanner.css — fully scoped under .mrb-banner. No global resets,
+   no bare element selectors, no ids. */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+.mrb-banner,
+.mrb-banner *,
+.mrb-banner *::before,
+.mrb-banner *::after {
+  box-sizing: border-box;
+}
+
+.mrb-banner {
+  --mrb-ink: #111111;
+  --mrb-red: #b71c1c;
+  --mrb-cream: #fffdf9;
+  --mrb-slate: #666666;
+  --mrb-hairline: #06661e;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--mrb-hairline);
+  font-family: "Poppins", sans-serif;
+  color: var(--mrb-ink);
+  overflow: hidden;
+}
+
+/* ---------- Carousel ---------- */
+
+.mrb-banner__carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  padding: 22px 0;
+  background: var(--mrb-cream);
+  border-bottom: 1px solid var(--mrb-hairline);
+}
+
+.mrb-banner__row {
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.mrb-banner__track {
+  display: flex;
+  gap: 14px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Longer duration = smoother, calmer motion across more photos */
+.mrb-banner__track--left {
+  animation: mrb-scroll-left 40s linear infinite;
+}
+
+.mrb-banner__track--right {
+  animation: mrb-scroll-right 36s linear infinite;
+}
+
+.mrb-banner__thumb {
+  flex: 0 0 auto;
+  width: 168px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 1px;
+  border: 1px solid var(--mrb-hairline);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes mrb-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes mrb-scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ---------- Panel (white, black text) — unchanged ---------- */
+
+.mrb-banner__panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 6% 56px;
+  background: #ffffff;
+}
+
+.mrb-banner__logo {
+  width: 92px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 18px;
+  filter: brightness(0);
+}
+
+.mrb-banner__eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--mrb-red);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.mrb-banner__role {
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.3px;
+  color: var(--mrb-ink);
+  margin-bottom: 6px;
+}
+
+.mrb-banner__contact {
+  font-size: 0.92rem;
+  color: var(--mrb-slate);
+  margin-bottom: 26px;
+}
+
+.mrb-banner__cta {
+  display: inline-block;
+  padding: 14px 34px;
+  border: 2.5px solid var(--mrb-ink);
+  background: transparent;
+  color: var(--mrb-ink);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.mrb-banner__cta:hover {
+  background: var(--mrb-ink);
+  color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+  .mrb-banner__thumb {
+    width: 138px;
+    height: 90px;
+  }
+
+  .mrb-banner__panel {
+    padding: 40px 8% 48px;
+  }
+
+  .mrb-banner__logo {
+    width: 78px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mrb-banner__thumb {
+    width: 118px;
+    height: 78px;
+  }
+
+  .mrb-banner__cta {
+    width: 100%;
+    text-align: center;
+  }
+}
